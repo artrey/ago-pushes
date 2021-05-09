@@ -1,0 +1,6 @@
+CREATE TABLE tokens
+(
+    userId    BIGINT PRIMARY KEY,
+    pushToken TEXT      NOT NULL,
+    created   TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,13 @@
+POST http://localhost:9999/api/tokens/register
+Content-Type: application/json
+
+{
+  "userId": 4,
+  "pushToken": "TOKEN_FOR_USER4"
+}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 201, "Response status is not 201");
+});
+%}
